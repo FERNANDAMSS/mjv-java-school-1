@@ -1,11 +1,21 @@
 package com.mjv.openbanking;
 
 public class GeradorConteudo {
+	/**
+	 * Metodo que gerá o conteudo do layout
+	 */
 	public String gerar (Movimentacao movimentacao) {
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append(movimentacao.getData().toString().replace("-", ""));
-		sb.append(String.format("%014d", Long.valueOf(movimentacao.getCpfCnpj().replaceAll("\\D", ""))) );
+		sb.append( movimentacao.getData().toString().replace("-", "") );
+		
+		String c = movimentacao.getCpfCnpj();
+		
+		String cpf=movimentacao.getCpfCnpj().replaceAll("\\D", "");
+		Long cpfLong = Long.valueOf(cpf);
+		String cpfFormatado =String.format("%014d",cpfLong); 
+		
+		sb.append(cpfFormatado);
 		
 		String nome = movimentacao.getNomeCliente();
 		
