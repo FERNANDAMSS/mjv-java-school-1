@@ -11,12 +11,6 @@ public class FormatadorUtil {
 		String cpfFormatador=String.format("%s.%s.%s-%s", part1, part2, part3, part4);
 		return cpfFormatador;
 	}
-	//forma + avançada
-	//String format + regex
-	public static String formatarCep(String cep) {
-		String cpfFormatador=cep.replaceAll("(\\d{2})(\\d{3})(\\d{3})", "$1.$2-$3");
-		return cpfFormatador;
-	}
 	public static String removerAcentos(String palavra) {
 		return Normalizer.normalize(palavra, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");
 	}
