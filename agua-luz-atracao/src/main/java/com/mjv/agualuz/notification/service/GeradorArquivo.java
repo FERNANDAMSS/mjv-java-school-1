@@ -10,25 +10,11 @@ import java.util.List;
 
 import com.mjv.agualuz.notification.model.Cadastro;
 import com.mjv.agualuz.notification.model.Contrato;
+import com.mjv.agualuz.notification.util.TextoUtil;
 
 public class GeradorArquivo {
-	public void csvJoinner(List<Contrato> contratos) {
-		StringBuilder sb = new StringBuilder();
-		
-		for(Contrato c : contratos) {
-			Cadastro cad = c.getCliente();
-			sb.append(cad.getCpf() + ";");
-			sb.append(cad.getRg() + ";");
-			sb.append(cad.getNome() + ";");
-		}
-		System.out.println(sb.toString());
-		
-		escrever(sb.toString(), "agua-luz-contratos.csv");
-		
-	}
 	public void csv(List<Contrato> contratos) {
 		StringBuilder sb = new StringBuilder();
-		
 		for(Contrato c : contratos) {
 			Cadastro cad = c.getCliente();
 			sb.append(cad.getCpf() + ";");
@@ -46,9 +32,9 @@ public class GeradorArquivo {
 		
 		for(Contrato c : contratos) {
 			Cadastro cad = c.getCliente();
-			sb.append(cad.getCpf());//remover os caracteres especiais
-			sb.append(cad.getRg());// incluir espaços em branco ate 10 e alinhar a equerda
-			sb.append(cad.getNome());//cortar o nome para no máximo 30c e colocar maiusculo.
+			sb.append(cad.getCpf().replaceAll("\\D", ""));//remover os caracteres especiais
+			sb.append(TextoUtil.ajustar(cad.getRg(),10));// incluir espaços em branco ate 10 e alinhar a equerda
+			sb.append(TextoUtil.ajustar(cad.getNome(),30));
 		}
 		System.out.println(sb.toString());
 		escrever(sb.toString(), "agua-luz-contratos.txt");
