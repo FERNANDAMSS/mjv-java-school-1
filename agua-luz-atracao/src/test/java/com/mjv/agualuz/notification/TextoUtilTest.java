@@ -21,6 +21,7 @@ public class TextoUtilTest {
 		String expectativa = "GLEYSON SA";
 		Assertions.assertEquals(expectativa,resultado );
 	}
+	
 	@DisplayName("zeroEsquerdaTest: Teste do método adiciona zeros a esquerda de um número")
 	@Test
 	public void zeroEsquerdaTest() {

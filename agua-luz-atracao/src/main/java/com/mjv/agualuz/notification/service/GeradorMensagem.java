@@ -12,6 +12,7 @@ public class GeradorMensagem {
 		//sb.append("Senhor(a) " + cliente.getNome() +" cpf de número " + cpfFormatado );
 		sb.append(String.format("Senhor(a) %s cpf de número %s, ",cliente.getNome(), cpfFormatado ));
 		sb.append(String.format("Informamos que conforme contrato com protocolo de número %d", contrato.getNumeroProtocolo()));
+		//vai usar muita formatacao
 		System.out.println(sb.toString());
 	}
 }
