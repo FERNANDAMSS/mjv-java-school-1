@@ -12,6 +12,20 @@ import com.mjv.agualuz.notification.model.Cadastro;
 import com.mjv.agualuz.notification.model.Contrato;
 
 public class GeradorArquivo {
+	public void csvJoinner(List<Contrato> contratos) {
+		StringBuilder sb = new StringBuilder();
+		
+		for(Contrato c : contratos) {
+			Cadastro cad = c.getCliente();
+			sb.append(cad.getCpf() + ";");
+			sb.append(cad.getRg() + ";");
+			sb.append(cad.getNome() + ";");
+		}
+		System.out.println(sb.toString());
+		
+		escrever(sb.toString(), "agua-luz-contratos.csv");
+		
+	}
 	public void csv(List<Contrato> contratos) {
 		StringBuilder sb = new StringBuilder();
 		
