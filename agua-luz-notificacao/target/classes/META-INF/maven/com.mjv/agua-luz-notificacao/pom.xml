@@ -9,4 +9,13 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	<dependencies>
+	
+		<dependency>
+			<groupId>com.mjv</groupId>
+			<artifactId>agua-luz-atracao</artifactId>
+			<version>1.1</version>
+		</dependency>
+		
+	</dependencies>
 </project>

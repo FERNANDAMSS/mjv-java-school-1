@@ -22,5 +22,11 @@ public enum Servico {
 		return sigla;
 	}
 	
-	
+	public static Servico getPaisPorSigla(String sigla) {
+		for(Servico s: Servico.values()) {
+			if(s.getSigla().equals(sigla))
+				return s;
+		}
+		return null;
+	}
 }

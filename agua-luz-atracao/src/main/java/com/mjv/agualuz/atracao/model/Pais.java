@@ -12,4 +12,12 @@ public enum Pais {
 	public String getSigla() {
 		return sigla;
 	}
+	
+	public static Pais getPaisPorSigla(String sigla) {
+		for(Pais p: Pais.values()) {
+			if(p.getSigla().equals(sigla))
+				return p;
+		}
+		return null;
+	}
 }

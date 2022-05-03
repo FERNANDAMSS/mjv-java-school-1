@@ -21,7 +21,7 @@ public class ContratoRepository {
 		contrato.setNumeroProtocolo(2022025687L);
 		
 		contrato.setServico(Servico.AGUA);
-		contrato.setTipoNotificacao(TipoNotificacao.WHATS);
+		contrato.setTipoNotificacao(TipoNotificacao.WTS);
 		Cadastro cliente = new Cadastro();
 		contrato.setCliente(cliente);
 		

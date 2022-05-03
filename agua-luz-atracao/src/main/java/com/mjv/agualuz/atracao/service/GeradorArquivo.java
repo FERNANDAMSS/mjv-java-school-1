@@ -52,7 +52,7 @@ public class GeradorArquivo {
 		valor = TextoUtil.completarZeroEsquerda(Long.valueOf(valor), 8);
 		sb.append(valor );
 		
-		sb.append(contrato.getTipoNotificacao().getSigla() );
+		sb.append(contrato.getTipoNotificacao().name() );
 		
 		escrever(sb.toString().toUpperCase(), "agua-luz-contratos.txt");
 		

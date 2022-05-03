@@ -3,7 +3,6 @@ package com.mjv.agualuz.atracao.app;
 import com.mjv.agualuz.atracao.model.Contrato;
 import com.mjv.agualuz.atracao.repository.ContratoRepository;
 import com.mjv.agualuz.atracao.service.GeradorArquivo;
-import com.mjv.agualuz.atracao.service.GeradorMensagem;
 
 public class SistemaAguaLuzAtracao {
 	public static void main(String[] args) {

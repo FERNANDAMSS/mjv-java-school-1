@@ -44,5 +44,13 @@ public class Contrato {
 	public void setCliente(Cadastro cliente) {
 		this.cliente = cliente;
 	}
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+	@Override
+	public String toString() {
+		return "Contrato [numeroProtocolo=" + numeroProtocolo + ", servico=" + servico + ", valor=" + valor
+				+ ", dataHora=" + dataHora + ", cliente=" + cliente + ", tipoNotificacao=" + tipoNotificacao + "]";
+	}
 	
 }
