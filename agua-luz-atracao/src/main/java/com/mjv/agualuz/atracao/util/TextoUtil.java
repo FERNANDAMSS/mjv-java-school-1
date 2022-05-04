@@ -16,12 +16,32 @@ public class TextoUtil {
 		return textoFormatado;
 	}
 	public static String cortar(String textoOrigianal, int tamanhoMaximo) {
-		String novoTexto = textoOrigianal.substring(0,tamanhoMaximo);
-		return novoTexto;
+		//jr
+		/*
+		String novoTexto="";
+		if(textoOrigianal.length() <=tamanhoMaximo)
+			novoTexto= textoOrigianal;
+		else {
+			novoTexto = textoOrigianal.substring(0,tamanhoMaximo);
+		}
+		*/
+		//return novoTexto;
+		return textoOrigianal.substring(0,Math.min(tamanhoMaximo, textoOrigianal.length()));
 	}
 	public static String ajustar(String textoOrigianal, int tamanhoMaximo) {
 		String textoAjustado = completar(textoOrigianal, tamanhoMaximo);
 		textoAjustado = cortar(textoAjustado, tamanhoMaximo);
 		return textoAjustado;
+	}
+	public static void main(String[] args) {
+		String nomeGrande = "GLEYSON SAMPAIO DE OLIVEIRA";
+		System.out.println(cortar(nomeGrande, 10));
+		
+		//criticos e pessimistas
+		String nomePequeno = "GLEYSON";
+		System.out.println(cortar(nomePequeno, 10));
+		
+		
+		
 	}
 }
