@@ -3,9 +3,10 @@ package javaexplorer.collection;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 import java.util.TreeSet;
@@ -19,7 +20,8 @@ public class CollectionExplorer {
 	//Todo o nosso cenário será com base na nossa School
 	public static void main(String[] args) {
 		//faseAtracao();
-		ordemApresentacao();
+		//ordemApresentacao();
+		ranking();
 	}
 	static void faseAtracao() {
 		/*
@@ -33,7 +35,7 @@ public class CollectionExplorer {
 		inscritos.add("RENATO GONÇALVES");
 		inscritos.add("AURI MARTINS");
 		inscritos.add("DAVY LUCAS");
-		inscritos.add("PRISCILA PASSOS");
+		inscritos.add("PRISCILA PASSARO");
 		inscritos.add("DIEGO CARDOSO");
 		
 		//renato por segurança se cadastrou novamente
@@ -80,7 +82,7 @@ public class CollectionExplorer {
 		Queue<String> alunos = new LinkedList<String>();
 		
 		alunos.add("DAVY LUCAS");
-		alunos.add("PRISCILA PASSOS");
+		alunos.add("PRISCILA PASSARO");
 		alunos.add("RENATO GONÇALVES");
 		alunos.add("AURI MARTINS");
 		
@@ -100,6 +102,40 @@ public class CollectionExplorer {
 		imprimirColecao(alunos);
 		
 		//veja a diferença da interface Queue para Deque
+		
+	}
+	static void ranking() {
+		//chegou a hora da verdade
+		//a Nicole me pediu para definir o Ranking dos alunos que apresentaram o projeto
+		//como eu não gostaria de criar um objeto somente devido +1 atributo
+		//eu resolvi o recurso do map para este finalidade
+		
+		//esta foi a minha analise
+		/*
+		 * 1 - DAVY LUCAS
+		 * 2 - DIEGO CARDOSO
+		 * 3 - PRISCILA PASSARO
+		 * 4 - AURI MARTINS
+		 * 5 - RENATO GONÇALVES 
+		 */
+		
+		Map<Integer, String> ranking = new HashMap();
+		ranking.put(1, "DAVY LUCAS");
+		ranking.put(5, "RENATO GONÇALVES");
+		ranking.put(3, "PRISCILA PASSARO");
+		ranking.put(2, "DIEGO CARDOSO");
+		ranking.put(4, "AURI MARTINS");
+		
+		//imprimindo a listagem contendo o ranking
+		for (Map.Entry<Integer, String> entry : ranking.entrySet()) {
+	        System.out.println("Ranking: " + entry.getKey() + "° - Aluno: " + entry.getValue());
+	    }
+		
+		//Agora quando o time de recrutamento precisar localizar um aluno 
+		//basta informar a sua posição no ranking
+		
+		String alunoRanking2 = ranking.get(2);
+		System.out.println(alunoRanking2);
 		
 	}
 	static void imprimirColecao(Collection colecao) {
