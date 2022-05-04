@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -16,9 +18,10 @@ import java.util.TreeSet;
 public class CollectionExplorer {
 	//Todo o nosso cenário será com base na nossa School
 	public static void main(String[] args) {
-		trabalhandoComColecao();
+		//faseAtracao();
+		ordemApresentacao();
 	}
-	static void trabalhandoComColecao() {
+	static void faseAtracao() {
 		/*
 		 * Vamos imaginar que iniciou a fase de inscrição pelo site da MJV
 		 */
@@ -68,7 +71,35 @@ public class CollectionExplorer {
 		}
 		System.out.println("\nimprimindo os inscritos sem repetição\n");
 		imprimirColecao(inscritosArrumado);
+	}
+	static void ordemApresentacao() {
+		//tempos se passaram e chegou o grande dia
+		//a apresentação, dai a Nicole foi e pediu
+		//para os alunos mencionarem quem vai apresentar
+		//dai a ordem será definida pelo chat no discord
+		Queue<String> alunos = new LinkedList<String>();
 		
+		alunos.add("DAVY LUCAS");
+		alunos.add("PRISCILA PASSOS");
+		alunos.add("RENATO GONÇALVES");
+		alunos.add("AURI MARTINS");
+		
+		imprimirColecao(alunos);
+		
+		System.out.println("Chamando próximo da fila para a apresentação");
+		String selecionado = alunos.poll();
+		System.out.println( selecionado + " foi selecionado para a apresetação");
+		
+		System.out.println("Gleyson pergunta para a Nicole quantos ainda faltam");
+		imprimirColecao(alunos);
+		
+		System.out.println("Gleyson pergunta para a Nicole quem é o próximo da fila");
+		System.out.println( alunos.peek() + " é o próximo da fila");
+		
+		alunos.add("DIEGO CARDOSO");
+		imprimirColecao(alunos);
+		
+		//veja a diferença da interface Queue para Deque
 		
 	}
 	static void imprimirColecao(Collection colecao) {
