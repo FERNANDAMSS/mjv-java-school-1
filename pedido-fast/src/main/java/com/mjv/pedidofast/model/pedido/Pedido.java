@@ -3,11 +3,20 @@ package com.mjv.pedidofast.model.pedido;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.mjv.pedidofast.model.cadastro.Cliente;
+
 public class Pedido {
 	private Integer id;
 	private LocalDateTime dataHora;
 	private Double valorTotal;
 	private List<PedidoItem> itens ;
+	private Cliente cliente;
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
 	public Integer getId() {
 		return id;
 	}

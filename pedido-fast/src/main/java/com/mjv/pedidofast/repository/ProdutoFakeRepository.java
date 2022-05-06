@@ -5,9 +5,9 @@ import java.util.Map;
 
 import com.mjv.pedidofast.model.cadastro.Produto;
 
-public class ProdutoRepository {
+public class ProdutoFakeRepository {
 	private Map<Integer, Produto> produtos = new HashMap();
-	public ProdutoRepository() {
+	public ProdutoFakeRepository() {
 		Produto cocacola = new Produto();
 		cocacola.setDescricao("COLA COLA LATA 350ml");
 		cocacola.setId(1);
