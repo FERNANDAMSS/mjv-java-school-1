@@ -5,6 +5,13 @@ public class Cliente {
 	private String cpf;
 	private String nome;
 	private String whatsapp;
+	private Endereco endereco;
+	public Endereco getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
 	public Integer getId() {
 		return id;
 	}
