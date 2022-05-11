@@ -13,7 +13,7 @@ public class ClienteFakeRepository {
 		gleyson.setCpf("12312");
 		gleyson.setId(1);
 		gleyson.setNome("GLEYSON SAMPAIO");
-		gleyson.setWhatsapp("11958940362");
+		gleyson.setWhatsapp(11958940362L);
 		Endereco endGleyson = new Endereco();
 		endGleyson.setBairro("CENTRO");
 		endGleyson.setNumero("SN");
@@ -27,7 +27,7 @@ public class ClienteFakeRepository {
 		frank.setCpf("986889089");
 		frank.setId(2);
 		frank.setNome("FRANK MARLON");
-		frank.setWhatsapp("98954357976");
+		frank.setWhatsapp(98954357976L);
 		Endereco endfrank = new Endereco();
 		endfrank.setBairro("VILA MILITAR");
 		endfrank.setNumero("123");
