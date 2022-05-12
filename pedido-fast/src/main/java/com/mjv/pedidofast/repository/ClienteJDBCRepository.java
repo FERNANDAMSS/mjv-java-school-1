@@ -1,14 +1,13 @@
 package com.mjv.pedidofast.repository;
 
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.time.LocalDateTime;
 
 import com.mjv.pedidofast.model.cadastro.Cliente;
 import com.mjv.pedidofast.util.jdbc.ConexaoUtil;
 
 public class ClienteJDBCRepository {
+	//fazer update / delete / selecionar
 	private Connection conexao;
 
 	public ClienteJDBCRepository() {
